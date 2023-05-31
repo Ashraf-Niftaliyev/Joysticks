@@ -3,8 +3,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment"
+    android:background="@color/milkWhite">
 
+ <ImageView
+     android:layout_width="600dp"
+     android:layout_height="750dp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+     android:background="@drawable/background_special_shape"/>
+
+ <TextView android:id="@+id/textLogin"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     android:layout_marginTop="20dp"
+     android:textSize="40sp"
+     android:textColor="@color/lightBlack"
+     android:fontFamily="@font/ubuntu_bold"
+     android:text="@string/login"/>
+
+ <EditText android:id="@+id/loginEmailEdittext"
+     android:layout_width="300dp"
+     android:layout_height="60dp"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintEnd_toEndOf="parent"
+  app:layout_constraintTop_toBottomOf="@id/textLogin"
+  android:layout_marginTop="20dp"
+  android:background="@drawable/login_edittext_shape"
+     android:drawableStart="@drawable/email_icon"
+     android:paddingStart="10dp"
+     android:inputType="textEmailAddress"
+     android:hint="@string/enter_your_email"
+     android:drawablePadding="10dp"
+     android:textColor="@color/lightBlack"
+     android:textSize="16sp"
+     />
+
+ <EditText
+     android:id="@+id/loginPasswordEditText"
+     android:layout_width="300dp"
+     android:layout_height="60dp"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintEnd_toEndOf="parent"
+  app:layout_constraintTop_toBottomOf="@id/loginEmailEdittext"
+  android:layout_marginTop="15dp"
+  android:background="@drawable/login_edittext_shape"
+     android:drawableStart="@drawable/lock_icon"
+     android:paddingStart="10dp"
+     android:inputType="textPassword"
+     android:hint="@string/enter_your_password"
+     android:drawablePadding="10dp"
+     android:textColor="@color/lightBlack"
+     android:textSize="16sp"/>
+
+ <TextView
+  android:id="@+id/forgotPassword"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+  app:layout_constraintTop_toBottomOf="@+id/loginPasswordEditText"
+  app:layout_constraintEnd_toEndOf="parent"
+  android:layout_marginTop="15dp"
+  android:layout_marginEnd="50dp"
+  android:text="Forgot password?"
+  android:textSize="16sp"
+  android:textColor="@color/black"
+  android:fontFamily="@font/ubuntu_bold"/>
+
+ <androidx.appcompat.widget.AppCompatButton
+     android:id="@+id/loginButton"
+     android:layout_width="200dp"
+     android:layout_height="55dp"
+     android:layout_marginTop="150dp"
+     android:background="@drawable/login_button_shape"
+     android:fontFamily="@font/nunito_extrabold"
+     android:text="@string/login"
+     android:textAllCaps="false"
+     android:textSize="24sp"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toBottomOf="@id/loginPasswordEditText"/>
+
+ <TextView
+     android:id="@+id/DontHaveAccount"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintTop_toBottomOf="@id/loginButton"
+  android:layout_marginTop="25dp"
+android:layout_marginStart="52dp"
+android:textSize="17sp"
+  android:textColor="@color/white"
+  android:text="@string/don_t_have_an_account"
+  android:fontFamily="@font/ubuntu_bold"/>
+
+ <TextView
+  android:id="@+id/register"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+  app:layout_constraintStart_toEndOf="@id/DontHaveAccount"
+  app:layout_constraintTop_toTopOf="@id/DontHaveAccount"
+  android:layout_marginStart="10dp"
+  android:textColor="@color/black"
+  android:textSize="17sp"
+  android:text="@string/register"
+  android:fontFamily="@font/ubuntu_bold"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

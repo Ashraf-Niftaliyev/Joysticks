@@ -77,28 +77,28 @@
       android:paddingEnd="40dp"/>
 
   <TextView
-      android:id="@+id/DontHaveAccount"
+      android:id="@+id/WelcomeDontHaveAccount"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="85dp"
       android:layout_marginTop="25dp"
-      android:text="Don't have an account?"
+      android:text="@string/don_t_have_an_account"
       android:textColor="@color/black"
       android:textSize="16sp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@id/WelcomeLoginButton" />
 
   <TextView
-    android:id="@+id/WelcomeSignUp"
+    android:id="@+id/WelcomeRegister"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-    app:layout_constraintStart_toEndOf="@id/DontHaveAccount"
+    app:layout_constraintStart_toEndOf="@id/WelcomeDontHaveAccount"
     android:textColor="@color/lightBlack"
     android:textStyle="bold"
-    app:layout_constraintTop_toTopOf="@id/DontHaveAccount"
+    app:layout_constraintTop_toTopOf="@id/WelcomeDontHaveAccount"
     android:layout_marginStart="3dp"
     android:textSize="16sp"
-    android:text="@string/sign_up"/>
+    android:text="@string/register"/>
 
 
 
