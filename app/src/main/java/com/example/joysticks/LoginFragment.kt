@@ -5,8 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import com.example.joysticks.databinding.FragmentLoginBinding
+import com.esrefnifteliyev.joysticks.R
+import com.esrefnifteliyev.joysticks.databinding.FragmentLoginBinding
+import com.example.joysticks.roomdb.AppRepo
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
@@ -20,8 +26,20 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.register.setOnClickListener {
-            findNavController().navigate(R.id.registerFragment)
+        binding.DontHaveAccount.setOnClickListener {view ->
+            Navigation.findNavController(view).navigate(R.id.registerFragment)
+        }
+        binding.loginButton.setOnClickListener {
+            val email = binding.loginEmailEdittext.text.toString()
+            val password = binding.loginPasswordEditText.text.toString()
+            val repo = AppRepo(requireContext())
+            CoroutineScope(Dispatchers.Main).launch {
+                var list = repo.getAllUsersEmail(email,password)
+
+                if (list.isNotEmpty()){
+                    Navigation.findNavController(it).navigate(R.id.MFragment)
+                }
+            }
         }
     }
 }

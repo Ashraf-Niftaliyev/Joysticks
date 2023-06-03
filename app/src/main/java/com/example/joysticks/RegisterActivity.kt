@@ -2,7 +2,8 @@ package com.example.joysticks
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.joysticks.databinding.ActivityRegisterBinding
+import com.esrefnifteliyev.joysticks.databinding.ActivityRegisterBinding
+
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding : ActivityRegisterBinding

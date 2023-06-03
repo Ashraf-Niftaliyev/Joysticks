@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "215835845368",
+    "project_id": "joysticks-de632",
+    "storage_bucket": "joysticks-de632.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215835845368:android:fa64d11af1e83520af510d",
+        "android_client_info": {
+          "package_name": "com.esrefnifteliyev.joysticks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215835845368-bqvibeagm65rlmcjlmg422efkbemri42.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esrefnifteliyev.joysticks",
+            "certificate_hash": "a61ccb5d335a4d934cf80e29119c02d347f46c2f"
+          }
+        },
+        {
+          "client_id": "215835845368-h90tl43n4t3nr4s2ge4m8tjdt9jk953c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj0C9AmH6kF4idSbPgz8drPwXOyyu7E48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215835845368-h90tl43n4t3nr4s2ge4m8tjdt9jk953c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

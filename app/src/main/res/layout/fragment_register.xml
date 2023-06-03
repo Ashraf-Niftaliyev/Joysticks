@@ -8,6 +8,7 @@
     android:background="@color/lightBlack">
 
     <ImageView
+        android:id="@+id/blackİmage"
         android:layout_width="600dp"
         android:layout_height="750dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +28,7 @@
         android:fontFamily="@font/ubuntu_bold"
         android:text="@string/register"/>
 
-    <EditText android:id="@+id/loginUserName"
+    <EditText android:id="@+id/RegisterUserName"
         android:layout_width="300dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,12 +45,12 @@
         android:textSize="16sp"
         />
 
-    <EditText android:id="@+id/loginEmailEdittext"
+    <EditText android:id="@+id/RegEmailEdittext"
         android:layout_width="300dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginUserName"
+        app:layout_constraintTop_toBottomOf="@id/RegisterUserName"
         android:layout_marginTop="15dp"
         android:background="@drawable/login_edittext_shape"
         android:drawableStart="@drawable/email_icon"
@@ -62,12 +63,12 @@
         />
 
     <EditText
-        android:id="@+id/loginPasswordEditText"
+        android:id="@+id/RegPasswordEditText"
         android:layout_width="300dp"
         android:layout_height="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginEmailEdittext"
+        app:layout_constraintTop_toBottomOf="@id/RegEmailEdittext"
         android:layout_marginTop="15dp"
         android:background="@drawable/login_edittext_shape"
         android:drawableStart="@drawable/lock_icon"
@@ -90,31 +91,20 @@
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginPasswordEditText"/>
+        app:layout_constraintTop_toBottomOf="@id/RegPasswordEditText"/>
 
     <TextView
         android:id="@+id/HaveAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerButton"
         android:layout_marginTop="25dp"
-        android:layout_marginStart="100dp"
         android:textSize="17sp"
-        android:textColor="@color/black"
-        android:text="Have an account?"
+        android:textColor="@color/pinkRed"
+        android:text="@string/have_an_account_login"
         android:fontFamily="@font/ubuntu_bold"/>
 
-    <TextView
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/HaveAccount"
-        app:layout_constraintTop_toTopOf="@id/HaveAccount"
-        android:layout_marginStart="15dp"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        android:text="@string/login"
-        android:fontFamily="@font/ubuntu_bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

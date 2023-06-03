@@ -80,25 +80,15 @@
       android:id="@+id/WelcomeDontHaveAccount"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="85dp"
       android:layout_marginTop="25dp"
-      android:text="@string/don_t_have_an_account"
+      android:text="@string/don_t_have_an_account_register"
       android:textColor="@color/black"
       android:textSize="16sp"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@id/WelcomeLoginButton" />
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/WelcomeLoginButton"
+      android:fontFamily="@font/ubuntu_bold"/>
 
-  <TextView
-    android:id="@+id/WelcomeRegister"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-    app:layout_constraintStart_toEndOf="@id/WelcomeDontHaveAccount"
-    android:textColor="@color/lightBlack"
-    android:textStyle="bold"
-    app:layout_constraintTop_toTopOf="@id/WelcomeDontHaveAccount"
-    android:layout_marginStart="3dp"
-    android:textSize="16sp"
-    android:text="@string/register"/>
 
 
 

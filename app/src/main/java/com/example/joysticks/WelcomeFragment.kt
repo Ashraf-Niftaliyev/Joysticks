@@ -6,7 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.joysticks.databinding.FragmentWelcomeBinding
+import com.esrefnifteliyev.joysticks.R
+import com.esrefnifteliyev.joysticks.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
     private lateinit var binding: FragmentWelcomeBinding
@@ -24,7 +25,7 @@ class WelcomeFragment : Fragment() {
             findNavController().navigate(R.id.loginFragment)
         }
 
-        binding.WelcomeRegister.setOnClickListener {
+        binding.WelcomeDontHaveAccount.setOnClickListener {
             findNavController().navigate(R.id.registerFragment)
         }
     }
