@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.esrefnifteliyev.joysticks.R
 import com.esrefnifteliyev.joysticks.databinding.FragmentSplashBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -25,9 +27,16 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val auth = Firebase.auth
         CoroutineScope(Dispatchers.Main).launch {
            delay(5000)
-           findNavController().navigate(R.id.welcomeFragment)
+           if(auth.currentUser != null
+               && auth.currentUser!!.email != null){
+               findNavController().navigate(R.id.MFragment)
+           }
+            else{
+                findNavController().navigate(R.id.welcomeFragment)
+           }
         }
     }
 }
